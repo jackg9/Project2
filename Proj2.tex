@@ -1,0 +1,28 @@
+\documentclass[a4paper,12pt]{article}
+\begin{document}
+
+This program performs three variations of local search algorithms. These three variations include Hill Climbing, Hill Climbing with Random Restarts, and Simulated Annealing. For each algorithm, a two-dimmensional function was passed in to be minimally optimized. An example function that had to be optimized is z below:
+
+\[r = \sqrt{x^2 + y^2} \]
+\[z = \frac{sin(x^2 + 3y^2)}{0.1 + r^2} + (x^2 + 5y^2) * \frac{exp(1-r^2)}{2} \]
+
+Here's how the algorithms performed on the function defined by z within the x and y range of (-2.5,2.5)
+
+Hill Climbing (without restarts):
+
+Elapsed runtime -> Under 1 second, averages between 0.4-0.9 seconds
+Optimal value found -> -0.1503 at point (-2.175, 0)
+
+Hill Climbing with Random Restarts:
+Elapsed time -> averages between 8-12 seconds
+Optimal Value found -> -0.1112 at point (-2.277, -1.260)
+
+Simulated Annealing:
+Elapsed time -> averages between 13-20 seconds
+Optimal Value found -> -0.1192 at point (2.3001, 0)
+
+After anaylizing the statistics of each algorithm, it appears the best minimal value found came from the hill climbing with random restarts algorithm (-0.1112). Simulated Annealing comes in as the 2nd best algorithm with a better value found compared to the normal hill climbing algorithm (-0.1192 compared to -0.1503).
+
+In conclusion, I would want to have more of a base test conducted with multiple functions ran numerous times. The calculated randomness involved with hill climbing with random restarts makes it a more efficent and better algorithm compared to normal hill climbing and simulated annealing.
+
+\end{document}
